@@ -1,26 +1,26 @@
 package julius
 
 import (
-  "github.com/hybridgroup/gobot"
+	"github.com/hybridgroup/gobot"
 )
 
 type JuliusAdaptor struct {
-  gobot.Adaptor
+	gobot.Adaptor
 }
 
 func NewJuliusAdaptor(name string) *JuliusAdaptor {
-  return &JuliusAdaptor{
-    Adaptor: *gobot.NewAdaptor(
-      name,
-      "julius.JuliusAdaptor",
-    ),
-  }
+	return &JuliusAdaptor{
+		Adaptor: *gobot.NewAdaptor(
+			name,
+			"julius.JuliusAdaptor",
+		),
+	}
 }
 
 func (j *JuliusAdaptor) Connect() bool {
-  return true
+	return true
 }
 
 func (j *JuliusAdaptor) Finalize() bool {
-  return true
+	return true
 }
